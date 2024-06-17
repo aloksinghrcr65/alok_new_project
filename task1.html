@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .image{
+            height: 124px;
+            width: 185px;
+            border: 1px solid black;
+        }
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #swapbtn{
+            border: 2px solid black;
+            height: 25px;
+            width: 50px;
+            margin-top: 50px;
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image" id="firstbox">
+            <img src="img.png" alt="first image" tabindex="0" class="ok">
+        </div>
+        <div class="image" id="secondbox">
+            <img src="usgs-hoS3dzgpHzw-unsplash.jpg"/>
+        </div>
+    </div>
+    <button id="swapbtn">swap</button>
+
+    <script>
+        const swapbtn = document.getElementById('swapbtn')
+        swapbtn.addEventListener('click', () => {
+            var firstImg = document.querySelector('#firstbox img');
+            var secondImg = document.querySelector('#secondbox img');
+            var temp = firstImg.src;
+            console.log(temp)
+            firstImg.src = secondImg.src
+            secondImg.src = temp
+        })
+    </script>
+</body>
+</html>

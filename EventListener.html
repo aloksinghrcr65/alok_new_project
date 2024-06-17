@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    </style>
+</head>
+<body>
+    
+<p class="para arif" id="uniquePara" Laptop="Macbook">This is paragraph</p>
+    <button class="btn" id="uniqueId">Dba do mujhe</button>
+    <button class="btn" >Dba do mujhe</button>
+    <button class="btn" >button 2</button>
+    <button class="btn" >button 3</button>
+    <button class="btn" >button 4</button>
+  
+
+    <script>
+            const myButton = document.getElementById("uniqueId");
+            
+            const myButton2 = document.getElementsByClassName("btn");
+
+            const myButton3 =document.querySelector(".btn")
+
+            const myButton4 = document.getElementsByTagName("button")
+
+            const AllBtn = document.querySelectorAll(".btn")
+// console.log(AllBtn)
+
+            const para = document.querySelector(".para")
+
+            // myButton3.addEventListener("click",function(){
+            //     para.style.background="pink" 
+            //     para.style.border="1px solid red" 
+            //     para.classList.add("jyoti")
+            //     para.classList.remove("arif")
+            //     para.classList.toggle("lagao")
+            // })
+
+            AllBtn.forEach((item)=>{
+                item.addEventListener("click",function(e){
+                    item.style.background="red"
+                    const dataSave= item.innerText
+                    para.innerText="this is new para"
+
+                    // Attribute
+
+                    para.setAttribute("time","bura ")
+                    para.removeAttribute("Laptop")
+                    para.setAttribute("hreff", "src")
+                      const myWord =  e.target.innerText;
+                    //   console.log(myWord)
+                      e.target.innerText="hello"
+                      const currentAttri =item.getAttribute("id")
+                      console.log(currentAttri)
+
+                })
+            })
+
+            // #attribute
+
+
+
+
+          
+            
+
+    </script>
+</body>
+</html>

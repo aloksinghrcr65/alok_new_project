@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difference</title>
+</head>
+<body>
+    <!-- innerHTML, innerTEXT, textContent, outerHTML, value -->
+    <div id="test">
+          This is a difference between <b>innerHTML</b>, <strong>innerTEXT</strong>
+          <span><b>textContent,  outerHTML, value</b></span>
+    </div>
+    <div id="test1" style="visibility: hidden;">
+           This is a difference between <strong>innerTEXT</strong>
+           and <strong>textContent</strong>
+  </div>
+    <input id="abc" value="123">
+
+    <script>
+        const x = document.getElementById('test');
+
+        // innerHTML
+        console.log(x.innerHTML);
+        // innerHTML include all the content of that id or class whic we target means
+        // it include whitespaces, tags as well as all the text means it print
+        // as it same which we write.
+        
+
+        const y = document.getElementById('test1');
+
+        // innerTEXT
+        console.log(x.innerText);
+        console.log(y.innerText);
+        // innerTEXT only include the text of the targeted id and remove the whitespaces.
+        // It also implement the style which we provide.
+
+        // textContent
+        console.log(x.textContent);
+        console.log(y.textContent);
+        // textContent include both the text content as well as white spaces.
+        // It give output as it which we write but does not include tags.
+        // It ignores the style.
+
+        // outrHTML
+        console.log(x.outerHTML);
+        console.log(y.outerHTML);
+        // It gives the whole details with the targeted id or tag with inner as well
+        // as outer content.
+
+        // value
+        console.log(x.value); // undefined
+
+        const z = document.getElementById('abc');
+        console.log(z.value); // 123
+        // it gives only the value of the tags of that tag which include value
+        // in their tag.
+        
+    </script>
+</body>
+</html>
